@@ -1,0 +1,3 @@
+[submodule "maven/api"]
+	path = maven/api
+	url = git@bitbucket-goncl:gdiaz/desafio-api.git

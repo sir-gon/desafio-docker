@@ -1,0 +1,27 @@
+version: '2'
+services:
+
+  api:
+    build: ./maven
+    # restart: always
+    volumes:
+      - ./maven/api/:/opt/app
+
+  couchdb:
+    image: couchdb:latest
+    restart: always
+    volumes:
+      - ./_rootfs/var/couchdb:/usr/local/var/lib/couchdb
+    environment:
+      COUCHDB_USER: "admin"
+      COUCHDB_PASSWORD: "12345"
+
+  web:
+    image: nginx:mainline-alpine
+    # restart: always
+    links:
+      - api
+      - couchdb
+    ports:
+      - "8080:80"
+      - "443:443"

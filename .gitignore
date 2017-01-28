@@ -1,0 +1,42 @@
+# track this file .gitignore (i.e. do NOT ignore it)
+!.gitignore
+
+# track .editorconfig file (i.e. do NOT ignore it)
+!.editorconfig
+
+# track readme.md in the root (i.e. do NOT ignore it)
+!readme.md
+
+# ignore all files that start with ~
+~*
+
+# ignore OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+*~
+*.directory
+.buildpath
+*._*
+Icon
+
+# ignore log files and databases
+*.log
+*.sql
+*.sql.gz
+*.sql.bz2
+*.sqlite
+
+# VIM swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+
+# Ignore all but project directories
+
+
+
