@@ -46,3 +46,11 @@ services:
       - ./_apps/desafio-php:/var/www/html/app
       - ./_rootfs/root:/root
       - ./_rootfs/etc/nginx/conf.d:/etc/nginx/conf.d:ro
+
+  cron:
+    build: ./cron
+    # restart: always
+    volumes:
+      - ./_rootfs/root:/root
+      - ./_rootfs/respaldo:/respaldo
+      - ./_rootfs/var/couchdb:/usr/local/var/lib/couchdb
