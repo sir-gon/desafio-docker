@@ -2,3 +2,7 @@
 	path = _apps/api
 	url = ssh://git@bitbucket-goncl/gdiaz/desafio-api.git
 	branch = master
+[submodule "_apps/app"]
+	path = _apps/app
+	url = ssh://git@bitbucket-goncl/gdiaz/desafio-app.git
+	branch = master

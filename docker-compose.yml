@@ -27,7 +27,7 @@ services:
 
     volumes:
       - ./_rootfs/root:/root
-      - ./html:/var/www/html
+      - ./_apps/app:/var/www/html/app
       - ./_rootfs/etc/php/conf.d/devel.ini:/usr/local/etc/php/conf.d/devel.ini:ro
       - ./_rootfs/etc/php-fpm.d/zz-custom.conf:/usr/local/etc/php-fpm.d/zz-custom.conf:ro
 
