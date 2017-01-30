@@ -5,16 +5,31 @@ services:
     build: ./maven
     # restart: always
     volumes:
-      - ./maven/api/:/opt/app
+      - ./_rootfs/root:/root
+      - ./_apps/api/:/opt/app
 
   couchdb:
     image: couchdb:latest
-    restart: always
+    # restart: always
     volumes:
+      - ./_rootfs/root:/root
       - ./_rootfs/var/couchdb:/usr/local/var/lib/couchdb
     environment:
       COUCHDB_USER: "admin"
       COUCHDB_PASSWORD: "12345"
+
+  php:
+    build: ./php
+    # restart: always
+
+    links:
+      - couchdb
+
+    volumes:
+      - ./_rootfs/root:/root
+      - ./html:/var/www/html
+      - ./_rootfs/etc/php/conf.d/devel.ini:/usr/local/etc/php/conf.d/devel.ini:ro
+      - ./_rootfs/etc/php-fpm.d/zz-custom.conf:/usr/local/etc/php-fpm.d/zz-custom.conf:ro
 
   web:
     image: nginx:mainline-alpine
@@ -22,8 +37,10 @@ services:
     links:
       - api
       - couchdb
+      - php
     ports:
       - "80:80"
       # - "443:443"
     volumes:
+      - ./_rootfs/root:/root
       - ./_rootfs/etc/nginx/conf.d:/etc/nginx/conf.d:ro

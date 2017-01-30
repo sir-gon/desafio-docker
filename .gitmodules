@@ -1,3 +1,4 @@
-[submodule "maven/api"]
-	path = maven/api
-	url = git@bitbucket-goncl:gdiaz/desafio-api.git
+[submodule "_apps/api"]
+	path = _apps/api
+	url = ssh://git@bitbucket-goncl/gdiaz/desafio-api.git
+	branch = master
