@@ -54,3 +54,4 @@ services:
       - ./_rootfs/root:/root
       - ./_rootfs/respaldo:/respaldo
       - ./_rootfs/var/couchdb:/usr/local/var/lib/couchdb
+      - ./cron/scripts:/usr/local/bin

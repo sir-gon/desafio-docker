@@ -1,1 +1,3 @@
 * * * * * root echo "Hello world" >> /var/log/cron.log 2>&1
+0 3 * * * sh /usr/local/bin/backup-daily.sh
+0 12 * * 6 sh /usr/local/bin/backup-weekly.sh
