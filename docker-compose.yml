@@ -16,7 +16,7 @@ services:
       - ./_rootfs/var/couchdb:/usr/local/var/lib/couchdb
     environment:
       COUCHDB_USER: "admin"
-      COUCHDB_PASSWORD: "12345"
+      COUCHDB_PASSWORD: "q1w2e3r4t5"
 
   php:
     build: ./php
