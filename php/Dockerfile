@@ -1,6 +1,6 @@
 FROM php:7-fpm-alpine
 
-RUN apk update && apk add wget
+RUN apk update && apk add curl
 
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv ./composer.phar /usr/local/bin/composer

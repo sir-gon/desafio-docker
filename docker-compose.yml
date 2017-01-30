@@ -23,11 +23,12 @@ services:
     # restart: always
 
     links:
+      - api
       - couchdb
 
     volumes:
+      - ./_apps/desafio-php:/var/www/html/app
       - ./_rootfs/root:/root
-      - ./_apps/app:/var/www/html/app
       - ./_rootfs/etc/php/conf.d/devel.ini:/usr/local/etc/php/conf.d/devel.ini:ro
       - ./_rootfs/etc/php-fpm.d/zz-custom.conf:/usr/local/etc/php-fpm.d/zz-custom.conf:ro
 
@@ -42,5 +43,6 @@ services:
       - "80:80"
       # - "443:443"
     volumes:
+      - ./_apps/desafio-php:/var/www/html/app
       - ./_rootfs/root:/root
       - ./_rootfs/etc/nginx/conf.d:/etc/nginx/conf.d:ro
