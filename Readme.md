@@ -25,11 +25,19 @@ Previamente se asume instalado docker y docker-compose.
 Usando el snapshot o clonando este repositorio (usar las llaves de deploy y configuracion):
 
 ```
-git clone --recursive git@bitbucket.org:gdiaz/desafio-docker.git
+git clone --recursive https://github.com/sir-gon/desafio-docker.git
 cd desafio-docker
 docker-compose build
 docker-compose up
 ```
+
+# Ver
+
+Los submódulos de esta solución:
+
+* Webapp PHP7 + jQuery + Bootstrap [desafio-webapp](https://github.com/sir-gon/desafio-webapp)
+* API REST/JSON en Java (Jersey) [desafio-api](https://github.com/sir-gon/desafio-api)
+
 
 # Referencias
 
@@ -37,6 +45,3 @@ docker-compose up
 ](https://medium.com/dekses/how-to-dockerize-java-restful-api-application-7aed70ef3c3a#.t0t9ch9la)
 
 [Run a cron job with Docker Julien Boulay](https://www.ekito.fr/people/run-a-cron-job-with-docker/)
-
-
-
