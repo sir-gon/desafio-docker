@@ -1,8 +1,8 @@
 [submodule "_apps/api"]
 	path = _apps/api
-	url = ssh://git@bitbucket-goncl/gdiaz/desafio-api.git
+url=https://github.com/sir-gon/desafio-api.git
 	branch = master
 [submodule "_apps/desafio-php"]
 	path = _apps/desafio-php
-	url = ssh://git@bitbucket-goncl/gdiaz/desafio-app.git
+url=https://github.com/sir-gon/desafio-webapp.git
 	branch = master
