@@ -18,7 +18,7 @@ couchdb.desafio.gon
 
 Agregar estos hosts apuntando a la IP correspondiente en la máquina de pruebas.
 
-# Instalacion
+# Instalación
 
 Previamente se asume instalado docker y docker-compose.
 
