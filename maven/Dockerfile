@@ -1,5 +1,5 @@
 # fetch basic image
-FROM maven:3.3.9-jdk-8-alpine
+FROM maven:3.6.1-jdk-8-alpine
 
 # application placed into /opt/app
 WORKDIR /opt/app/
